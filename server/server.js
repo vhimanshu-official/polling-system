@@ -20,7 +20,7 @@ app.use(upload());
 // Configure CORS
 app.use(
   cors({
-    origin: "https://polling-system-client-pi.vercel.app", // Frontend origin
+    origin: `${process.env.CORS_ORIGIN}`, // Frontend origin
     credentials: true, // Allows cookies and headers
   })
 );
